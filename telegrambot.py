@@ -4,7 +4,7 @@ import requests
 import os
 import json
 
-TOKEN = '7043388860:AAEeFDRB-16tr_4Z-i4VeM4r1yysUD3O-tk'
+TOKEN = ''
 bot = telebot.TeleBot(TOKEN)
 
 # Replace these with your actual API endpoints
