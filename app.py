@@ -47,24 +47,6 @@ def get_response_llama2(prompt):
   )
   return sequences[0]['generated_text']
 
-systems = {"role": "system", "content": "You are an assistant to retrieve important information from a given message. Each variable should have its own line."}
-    # Ensure the input is a list of messages
-    if isinstance(inp, str):
-        user_message = {"role": "user", "content": inp}
-        new_inp = [systems, user_message]
-    elif isinstance(inp, list):
-        new_inp = [systems] + inp
-    else:
-        raise ValueError("Input should be a string or a list of messages")
-    
-    # print("inp : \n", new_inp)
-    # new_inp = inp
-    # new_inp.insert(0,systems)
-    # print("inp : \n ",new_inp)
-    completion = get_response_llama2(
-    new_inp
-    )
-    return completion
 
 # Analyze transcription function
 def analyze_transcription(transcription):
